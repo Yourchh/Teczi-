@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teczi - Cursos de Tecnología y Creatividad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo"><h1>Teczi</h1></a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Transforma tu futuro. Aprende habilidades para el mañana.</h2>
+                <p>Cursos online impartidos por expertos de la industria para impulsar tu carrera.</p>
+                <a href="#cursos" class="btn btn-primary">Ver Cursos Disponibles</a>
+            </div>
+        </section>
+
+        <section id="cursos" class="courses-section">
+            <div class="container">
+                <h2>Cursos Destacados</h2>
+                <div class="carousel-wrapper">
+                    <div class="carousel-slides" id="carousel-slides">
+                        </div>
+                    <button id="prev-btn" class="carousel-btn prev">&#10094;</button>
+                    <button id="next-btn" class="carousel-btn next">&#10095;</button>
+                </div>
+                <div class="carousel-dots" id="carousel-dots">
+                    </div>
+                <div class="video-section">
+                    <h3>Videos Demostrativos</h3>
+                    <div id="video-grid" class="video-grid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h3>¿Listo para empezar a aprender?</h3>
+                <a href="#" class="btn btn-secondary">Inscríbete Ahora</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Teczi. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="modal-viewer" class="modal">
+        <div class="modal-dialog">
+            <span class="close-button">&times;</span>
+            <div id="modal-content" class="modal-content">
+                <div id="modal-media-container"></div>
+                <div id="modal-text-container">
+                    <h2 id="modal-course-title"></h2>
+                    <p id="modal-course-description"></p>
+                    <a href="#" class="btn btn-primary">Comenzar este curso</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

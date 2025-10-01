@@ -1,0 +1,153 @@
+/* --- Variables y Estilos Base (sin cambios) --- */
+:root {
+    --primary-color: #0056d2;
+    --secondary-color: #f7f9fc;
+    --accent-color: #ffc107;
+    --text-color: #333;
+    --heading-color: #1a253c;
+    --bg-color: #ffffff;
+    --light-gray: #e9ecef;
+    --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    --border-radius: 8px;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Lato', sans-serif;
+}
+/* ... (resto de estilos base, header, hero, botones, etc. son iguales) ... */
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-secondary); margin: 0; background-color: var(--bg-color); color: var(--text-color); line-height: 1.7; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.main-header { background: var(--bg-color); border-bottom: 1px solid var(--light-gray); padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+.main-header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo h1 { margin: 0; color: var(--primary-color); font-family: var(--font-primary); }
+.main-nav ul { margin: 0; padding: 0; list-style: none; display: flex; gap: 25px; }
+.main-nav a { text-decoration: none; color: var(--text-color); font-weight: 600; transition: color 0.3s; }
+.main-nav a:hover { color: var(--primary-color); }
+.hero { background-color: var(--secondary-color); text-align: center; padding: 6rem 0; }
+.hero h2 { font-family: var(--font-primary); font-size: 2.8rem; color: var(--heading-color); margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; }
+.btn { padding: 12px 28px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: transform 0.2s, box-shadow 0.2s; display: inline-block; }
+.btn-primary { background-color: var(--primary-color); color: white; }
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0, 86, 210, 0.3); }
+.btn-secondary { background-color: var(--accent-color); color: var(--heading-color); }
+.btn-secondary:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4); }
+
+/* --- Sección de Cursos (Ahora contiene el carrusel) --- */
+.courses-section { padding: 4rem 0; }
+.courses-section h2 { text-align: center; font-family: var(--font-primary); font-size: 2.5rem; margin-bottom: 3rem; color: var(--heading-color); }
+
+/* --- Estilos del Carrusel --- */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Ancho máximo del carrusel */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-slide {
+    flex: 0 0 100%;
+    position: relative;
+    cursor: pointer;
+    height: 500px; /* Altura del carrusel */
+}
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 40px 30px 20px;
+}
+.slide-caption h3 {
+    margin: 0 0 5px 0;
+    font-family: var(--font-primary);
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    color: var(--heading-color);
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+.carousel-btn:hover { background-color: white; }
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+.carousel-dots {
+    text-align: center;
+    padding: 15px 0;
+}
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.dot.active { background-color: var(--primary-color); }
+
+/* --- Sección de Videos --- */
+.video-section {
+    margin-top: 4rem;
+}
+.video-section h3 {
+    text-align: center;
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--heading-color);
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+/* Reutilizamos el estilo de tarjeta para los videos */
+.video-card {
+    background: var(--bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.video-card:hover { transform: translateY(-8px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+.video-card video { width: 100%; display: block; height: 250px; object-fit: cover; }
+.video-card .card-content { padding: 20px; }
+.video-card .card-content h4 { margin: 0; font-family: var(--font-primary); color: var(--heading-color); }
+
+/* --- Estilos del Modal (sin cambios) --- */
+/* ... (El CSS para el modal es el mismo que en la versión anterior) ... */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(26, 37, 60, 0.85); overflow-y: auto; padding: 20px; }
+.modal-dialog { background: var(--bg-color); border-radius: var(--border-radius); max-width: 900px; width: 100%; margin: 5% auto; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.2); animation: slideIn 0.4s ease-out; }
+.modal-content { display: flex; padding: 0; }
+#modal-media-container { flex: 1.2; background-color: #000; }
+#modal-media-container img, #modal-media-container video { width: 100%; height: 100%; display: block; object-fit: cover; border-top-left-radius: var(--border-radius); border-bottom-left-radius: var(--border-radius); }
+#modal-text-container { flex: 1; padding: 30px; display: flex; flex-direction: column; }
+#modal-course-title { font-family: var(--font-primary); color: var(--heading-color); margin: 0 0 1rem 0; }
+#modal-course-description { flex-grow: 1; }
+.close-button { position: absolute; top: 15px; right: 20px; color: #aaa; font-size: 30px; cursor: pointer; transition: color 0.2s; z-index: 10; }
+.close-button:hover { color: var(--primary-color); }
+@keyframes slideIn { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@media (max-width: 768px) { .modal-content { flex-direction: column; } #modal-media-container img, #modal-media-container video { border-radius: var(--border-radius) var(--border-radius) 0 0; } }
