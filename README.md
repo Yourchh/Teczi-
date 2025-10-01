@@ -3,12 +3,12 @@ Empresa de cursos
 
 ---
 
-## Documentacion
+### Documentacion
 En la presente documentacion se presentan los pasos detallados para la elaboracion de la practica 5.
 
 ---
 
-### ## 1. Creación del Bucket en S3 ☁️
+## 1. Creación del Bucket en S3 ☁️
 
 Vamos a crear el contenedor principal en la nube. Piensa en un **bucket** como en un disco duro virtual exclusivo para tu proyecto.
 
@@ -26,7 +26,7 @@ Vamos a crear el contenedor principal en la nube. Piensa en un **bucket** como e
 
 ---
 
-### ## 2. Subida de Objetos y Asignación de Permisos ⬆️
+## 2. Subida de Objetos y Asignación de Permisos ⬆️
 
 Ahora cargaremos tus archivos multimedia. Cada archivo en S3 se llama "objeto". Les daremos un permiso específico que es como una "llave de solo lectura" para que cualquiera en internet pueda verlos.
 
@@ -47,7 +47,7 @@ Ahora cargaremos tus archivos multimedia. Cada archivo en S3 se llama "objeto". 
 
 ---
 
-### ## 3. Preparación de los Archivos de la Página Web 🎨
+## 3. Preparación de los Archivos de la Página Web 🎨
 
 Ahora, crea los tres archivos de tu sitio web en una carpeta en tu computadora. No necesitas pegar el código aquí, solo entender qué hace cada archivo y dónde harás la modificación clave.
 
@@ -61,7 +61,7 @@ Ahora, crea los tres archivos de tu sitio web en una carpeta en tu computadora. 
 
 ---
 
-### ## 4. Alojamiento del Sitio Web Estático en S3 🌐
+## 4. Alojamiento del Sitio Web Estático en S3 🌐
 
 Finalmente, configuraremos el bucket para que actúe como un servidor web y subiremos los archivos de tu página.
 
