@@ -2,16 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- SEPARAMOS LOS DATOS EN IMÁGENES Y VIDEOS ---
     const imageData = [
-        { id: 1, title: 'Desarrollo Web Full-Stack', description: 'Aprende a crear aplicaciones web completas desde cero con React, Node.js y MongoDB.', imageSrc: '/media/img1.png' },
-        { id: 2, title: 'Diseño de UI/UX para Apps Móviles', description: 'Crea interfaces intuitivas y experiencias de usuario memorables con Figma.', imageSrc: '/media/img2.png' },
-        { id: 3, title: 'Introducción a Ciencia de Datos', description: 'Analiza datos y crea modelos predictivos usando Pandas, Matplotlib y Scikit-learn.', imageSrc: '/media/img3.png' },
-        { id: 4, title: 'Marketing Digital y SEO', description: 'Posiciona marcas en buscadores y gestiona campañas de marketing online efectivas.', imageSrc: '/media/img4.png' },
-        { id: 5, title: 'Ciberseguridad Esencial', description: 'Protege sistemas y redes de ataques maliciosos aprendiendo hacking ético.', imageSrc: '/media/img5.png' }
+        { id: 1, title: 'Desarrollo Web Full-Stack', description: 'Aprende a crear aplicaciones web completas desde cero con React, Node.js y MongoDB.', imageSrc: 'https://galeria-teczi-yorch.s3.us-east-1.amazonaws.com/img1.png' },
+        { id: 2, title: 'Diseño de UI/UX para Apps Móviles', description: 'Crea interfaces intuitivas y experiencias de usuario memorables con Figma.', imageSrc: 'https://galeria-teczi-yorch.s3.us-east-1.amazonaws.com/img2.png' },
+        { id: 3, title: 'Introducción a Ciencia de Datos', description: 'Analiza datos y crea modelos predictivos usando Pandas, Matplotlib y Scikit-learn.', imageSrc: 'https://galeria-teczi-yorch.s3.us-east-1.amazonaws.com/img3.png' },
+        { id: 4, title: 'Marketing Digital y SEO', description: 'Posiciona marcas en buscadores y gestiona campañas de marketing online efectivas.', imageSrc: 'https://galeria-teczi-yorch.s3.us-east-1.amazonaws.com/img4.png' },
+        { id: 5, title: 'Ciberseguridad Esencial', description: 'Protege sistemas y redes de ataques maliciosos aprendiendo hacking ético.', imageSrc: 'https://galeria-teczi-yorch.s3.us-east-1.amazonaws.com/img5.png' }
     ];
 
     const videoData = [
-        { id: 6, title: 'Demo: Creando una API RESTful', short_description: 'Observa el proceso de creación de una API con Node.js y Express en tiempo real.', videoSrc: '/media/Teczi_Course_Ad_Video_Generation.mp4' },
-        { id: 7, title: 'Caso de Éxito: E-commerce', short_description: 'Análisis de un proyecto real de e-commerce y las tecnologías utilizadas.', videoSrc: '/media/Video_Generado_Listo.mp4' }
+        { id: 6, title: 'Demo: Creando una API RESTful', short_description: 'Observa el proceso de creación de una API con Node.js y Express en tiempo real.', videoSrc: 'https://galeria-teczi-yorch.s3.us-east-1.amazonaws.com/Teczi_Course_Ad_Video_Generation.mp4' },
+        { id: 7, title: 'Caso de Éxito: E-commerce', short_description: 'Análisis de un proyecto real de e-commerce y las tecnologías utilizadas.', videoSrc: 'https://galeria-teczi-yorch.s3.us-east-1.amazonaws.com/Video_Generado_Listo.mp4' }
     ];
 
     // --- ELEMENTOS DEL DOM ---
